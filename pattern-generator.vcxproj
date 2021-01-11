@@ -17,7 +17,6 @@
     <ClCompile Include="src\instruction.cpp" />
     <ClCompile Include="src\maker.cpp" />
     <ClCompile Include="src\menu.cpp" />
-    <ClCompile Include="src\plugin.cpp" />
     <ClCompile Include="src\pluginmain.cpp" />
     <ClCompile Include="src\utils.cpp" />
   </ItemGroup>
@@ -25,7 +24,6 @@
     <ClInclude Include="src\instruction.hpp" />
     <ClInclude Include="src\maker.hpp" />
     <ClInclude Include="src\menu.hpp" />
-    <ClInclude Include="src\plugin.h" />
     <ClInclude Include="src\pluginconfig.h" />
     <ClInclude Include="src\pluginmain.h" />
     <ClInclude Include="src\utils.hpp" />

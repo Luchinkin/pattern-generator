@@ -12,9 +12,6 @@
     <ClCompile Include="src\menu.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\plugin.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="src\pluginmain.cpp">
       <Filter>src</Filter>
     </ClCompile>
@@ -30,9 +27,6 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="src\menu.hpp">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\plugin.h">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="src\pluginconfig.h">
