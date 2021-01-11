@@ -5,6 +5,7 @@
 #include <iterator>
 
 #include "instruction.hpp"
+#include "clipboard.hpp"
 
 static constexpr auto MAX_PROCESS_INSTRUCTIONS = 128u;
 
@@ -58,6 +59,9 @@ void maker::work()
 
         dprintf( "Found unique pattern for this place:\nx64dbg:%s\nIDA:%s\n",
                  final_double_wildcard_pattern.c_str(), ida_pattern.c_str() );
+
+        save_to_clipboard( ida_pattern );
+        dprintf( "Saved IDA pattern to clipboard!\n" );
     }
 
 }

@@ -21,6 +21,9 @@
     <ClCompile Include="src\instruction.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\clipboard.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\maker.hpp">
@@ -39,6 +42,9 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="src\instruction.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\clipboard.hpp">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>

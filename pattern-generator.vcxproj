@@ -14,6 +14,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\clipboard.cpp" />
     <ClCompile Include="src\instruction.cpp" />
     <ClCompile Include="src\maker.cpp" />
     <ClCompile Include="src\menu.cpp" />
@@ -21,6 +22,7 @@
     <ClCompile Include="src\utils.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\clipboard.hpp" />
     <ClInclude Include="src\instruction.hpp" />
     <ClInclude Include="src\maker.hpp" />
     <ClInclude Include="src\menu.hpp" />
