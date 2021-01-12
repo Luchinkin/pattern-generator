@@ -90,6 +90,7 @@ void instruction::analyze()
 
 			m_mask.resize( inst.size, true );
 
+			bool is_rel_addr_valid = true;
 			int64_t next_op_rel_addr = opcode_size;
 			for ( auto i = x86.op_count - 1; i >= 0; i-- )
 			{
@@ -120,7 +121,7 @@ void instruction::analyze()
 					else if ( disp <= ULLONG_MAX )
 						found = apply_mask_by_search<std::uint64_t>( m_bytes, disp, &m_mask );
 					
-					break;
+					is_rel_addr_valid = false;
 				}
 
 				if ( op.type == X86_OP_IMM )
@@ -139,10 +140,10 @@ void instruction::analyze()
 					if ( !found && imm == UINT_MAX )
 						found = apply_mask_by_search<std::uint8_t>( m_bytes, imm, &m_mask );
 
-					break;
+					is_rel_addr_valid = false;
 				}
 
-				if ( op.type != X86_OP_REG && op.type != X86_OP_MEM )
+				if ( op.type != X86_OP_REG && op.type != X86_OP_MEM && is_rel_addr_valid )
 				{
 					std::fill( m_mask.begin() + next_op_rel_addr, m_mask.end(), false );
 					break;
