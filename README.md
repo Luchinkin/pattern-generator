@@ -1,1 +1,1 @@
-pattern-generator
+IDA stylized pattern generator for x64dbg
