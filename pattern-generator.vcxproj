@@ -73,7 +73,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <IncludePath>$(ProjectDir)\thirdparty\;$(IncludePath)</IncludePath>
-    <LibraryPath>$(ProjectDir)\thirdparty\;$(ProjectDir)\thirdparty\capstone\msvc\x64\Release\;$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(ProjectDir)x64\Release;$(ProjectDir)thirdparty\;$(ProjectDir)thirdparty\capstone\msvc\x64\Release\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <IncludePath>$(ProjectDir)\thirdparty;$(IncludePath)</IncludePath>
@@ -99,10 +99,8 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\";pattern_generator_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>V:\pattern-generator-cmake\build\include;V:\pattern-generator-cmake\build\_deps\x64dbg-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>V:\pattern-generator-cmake\build\include;V:\pattern-generator-cmake\build\_deps\x64dbg-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -111,12 +109,9 @@
     </Midl>
     <Link>
       <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;capstone.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>V:/pattern-generator-cmake/build/_deps/x64dbg-src;V:/pattern-generator-cmake/build/_deps/x64dbg-src/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>V:/pattern-generator-cmake/build/Debug/pattern-generator.lib</ImportLibrary>
-      <ProgramDataBaseFile>V:/pattern-generator-cmake/build/Debug/pattern-generator.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -125,7 +120,6 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -143,10 +137,8 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\";pattern_generator_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>V:\pattern-generator-cmake\build\include;V:\pattern-generator-cmake\build\_deps\x64dbg-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>V:\pattern-generator-cmake\build\include;V:\pattern-generator-cmake\build\_deps\x64dbg-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -155,12 +147,9 @@
     </Midl>
     <Link>
       <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;capstone.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>V:/pattern-generator-cmake/build/_deps/x64dbg-src;V:/pattern-generator-cmake/build/_deps/x64dbg-src/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>V:/pattern-generator-cmake/build/Release/pattern-generator.lib</ImportLibrary>
-      <ProgramDataBaseFile>V:/pattern-generator-cmake/build/Release/pattern-generator.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
